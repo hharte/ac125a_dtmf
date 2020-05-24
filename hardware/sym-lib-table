@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name ac125a_dtmf)(type Legacy)(uri ${KIPRJMOD}/ac125a_dtmf.lib)(options "")(descr ""))
+)

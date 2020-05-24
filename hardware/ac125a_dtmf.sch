@@ -1,0 +1,497 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 6900 3450 1250 1500
+U 5EBEBADD
+F0 "Microcontroller" 50
+F1 "Microcontroller.sch" 50
+F2 "AC125A_T0" I L 6900 3550 50 
+F3 "AC125A_R0" I L 6900 3650 50 
+F4 "AC125A_T1" I L 6900 4350 50 
+F5 "AC125A_R1" I L 6900 4450 50 
+F6 "AC125A_ST0" I L 6900 3850 50 
+F7 "AC125A_ST1" I L 6900 4650 50 
+F8 "ACT125A_PA0" I R 8150 3550 50 
+F9 "ACT125A_PB0" I R 8150 3650 50 
+F10 "ACT125A_PC0" I R 8150 3750 50 
+F11 "ACT125A_PD0" I R 8150 3850 50 
+F12 "ACT125A_PE0" I R 8150 3950 50 
+F13 "ACT125A_C0" I R 8150 4050 50 
+F14 "ACT125A_PA1" I R 8150 4350 50 
+F15 "ACT125A_PB1" I R 8150 4450 50 
+F16 "ACT125A_PC1" I R 8150 4550 50 
+F17 "ACT125A_PD1" I R 8150 4650 50 
+F18 "ACT125A_PE1" I R 8150 4750 50 
+F19 "ACT125A_C1" I R 8150 4850 50 
+$EndSheet
+Text Label 5400 3550 2    50   ~ 0
+AC125A_T0
+Text Label 5400 3650 2    50   ~ 0
+AC125A_ST0
+Text Label 5400 3750 2    50   ~ 0
+AC125A_PA0
+Wire Wire Line
+	4900 3750 5500 3750
+Text Label 5400 3850 2    50   ~ 0
+AC125A_PC0
+Wire Wire Line
+	4900 3850 5500 3850
+Text Label 5400 3950 2    50   ~ 0
+AC125A_PE0
+Wire Wire Line
+	4900 3950 5500 3950
+Text Label 6150 4150 2    50   ~ 0
+AC125A_B0
+Text Label 5400 4350 2    50   ~ 0
+AC125A_T1
+Text Label 5400 4450 2    50   ~ 0
+AC125A_ST1
+Text Label 5400 4550 2    50   ~ 0
+AC125A_PA1
+Wire Wire Line
+	4900 4550 5500 4550
+Text Label 5400 4650 2    50   ~ 0
+AC125A_PC1
+Wire Wire Line
+	4900 4650 5500 4650
+Text Label 5400 4750 2    50   ~ 0
+AC125A_PE1
+Wire Wire Line
+	4900 4750 5500 4750
+Wire Wire Line
+	4900 4950 5500 4950
+Text Label 5450 4950 2    50   ~ 0
+AC125A_B1
+Wire Wire Line
+	6350 2600 6350 3650
+Wire Wire Line
+	6250 3650 6250 3850
+Wire Wire Line
+	4900 3650 6250 3650
+Wire Wire Line
+	6200 4450 6200 4650
+Wire Wire Line
+	4900 4450 6200 4450
+Wire Wire Line
+	4900 5150 5500 5150
+Text Label 5400 5150 2    50   ~ 0
+AC125A_DT
+Wire Wire Line
+	4900 5350 5500 5350
+Text Label 5450 5350 2    50   ~ 0
+AC125A_B2
+Text GLabel 8900 3650 2    50   Output ~ 0
+AC125A_PB0
+Wire Wire Line
+	8150 3650 8900 3650
+Text GLabel 8900 3550 2    50   Output ~ 0
+AC125A_PA0
+Wire Wire Line
+	8150 3550 8900 3550
+Text GLabel 8900 3850 2    50   Output ~ 0
+AC125A_PD0
+Wire Wire Line
+	8150 3850 8900 3850
+Text GLabel 8900 3750 2    50   Output ~ 0
+AC125A_PC0
+Wire Wire Line
+	8150 3750 8900 3750
+Text GLabel 8900 4050 2    50   Output ~ 0
+AC125A_C0
+Wire Wire Line
+	8150 4050 8900 4050
+Text GLabel 8900 3950 2    50   Output ~ 0
+AC125A_PE0
+Wire Wire Line
+	8150 3950 8900 3950
+Text GLabel 8900 4450 2    50   Output ~ 0
+AC125A_PB1
+Wire Wire Line
+	8150 4450 8900 4450
+Text GLabel 8900 4350 2    50   Output ~ 0
+AC125A_PA1
+Wire Wire Line
+	8150 4350 8900 4350
+Text GLabel 8900 4650 2    50   Output ~ 0
+AC125A_PD1
+Wire Wire Line
+	8150 4650 8900 4650
+Text GLabel 8900 4550 2    50   Output ~ 0
+AC125A_PC1
+Wire Wire Line
+	8150 4550 8900 4550
+Text GLabel 8900 4850 2    50   Output ~ 0
+AC125A_C1
+Wire Wire Line
+	8150 4850 8900 4850
+Text GLabel 8900 4750 2    50   Output ~ 0
+AC125A_PE1
+Wire Wire Line
+	8150 4750 8900 4750
+Text GLabel 5500 3850 2    50   Output ~ 0
+AC125A_PC0
+Text GLabel 5500 3750 2    50   Output ~ 0
+AC125A_PA0
+Text GLabel 5500 3950 2    50   Output ~ 0
+AC125A_PE0
+Text GLabel 6200 4150 2    50   Input ~ 0
+AC125A_B0
+Text GLabel 5500 4650 2    50   Output ~ 0
+AC125A_PC1
+Text GLabel 5500 4550 2    50   Output ~ 0
+AC125A_PA1
+Text GLabel 5500 4750 2    50   Output ~ 0
+AC125A_PE1
+Text GLabel 5500 4950 2    50   Input ~ 0
+AC125A_B1
+Text GLabel 5500 5350 2    50   Input ~ 0
+AC125A_B2
+$Comp
+L Device:CP1 C17
+U 1 1 5F0A01A2
+P 4150 1550
+F 0 "C17" H 4265 1596 50  0000 L CNN
+F 1 "10uF 25V" H 4265 1505 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 4150 1550 50  0001 C CNN
+F 3 "~" H 4150 1550 50  0001 C CNN
+	1    4150 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L ac125a_dtmf:SPBW06 PS1
+U 1 1 5F0B4C85
+P 3050 1450
+F 0 "PS1" H 3050 1061 50  0000 C CNN
+F 1 "SPBW06" H 3050 970 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_TRACO_TMR-xxxx_THT" H 2000 1200 50  0001 L CNN
+F 3 "" H 4100 1150 50  0001 L CNN
+	1    3050 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1350 4150 1350
+Wire Wire Line
+	4150 1350 4150 1400
+Wire Wire Line
+	4150 1700 4150 1800
+Wire Wire Line
+	4150 1800 3550 1800
+Wire Wire Line
+	3550 1800 3550 1550
+Wire Wire Line
+	3550 1550 3450 1550
+Connection ~ 4150 1350
+$Comp
+L power:+5V #PWR0106
+U 1 1 5F0C394C
+P 4600 1250
+AR Path="/5F0C394C" Ref="#PWR0106"  Part="1" 
+AR Path="/5EBEBADD/5F0C394C" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0106" H 4600 1100 50  0001 C CNN
+F 1 "+5V" H 4615 1423 50  0000 C CNN
+F 2 "" H 4600 1250 50  0001 C CNN
+F 3 "" H 4600 1250 50  0001 C CNN
+	1    4600 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C18
+U 1 1 5F0C3952
+P 4600 1550
+AR Path="/5F0C3952" Ref="C18"  Part="1" 
+AR Path="/5EBEBADD/5F0C3952" Ref="C?"  Part="1" 
+F 0 "C18" H 4715 1596 50  0000 L CNN
+F 1 "0.1uF" H 4715 1505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 4638 1400 50  0001 C CNN
+F 3 "~" H 4600 1550 50  0001 C CNN
+	1    4600 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5F0C3958
+P 4600 1850
+AR Path="/5F0C3958" Ref="#PWR0107"  Part="1" 
+AR Path="/5BA49F1B/5F0C3958" Ref="#PWR?"  Part="1" 
+AR Path="/5EBEBADD/5F0C3958" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0107" H 4600 1600 50  0001 C CNN
+F 1 "GND" H 4605 1677 50  0000 C CNN
+F 2 "" H 4600 1850 50  0001 C CNN
+F 3 "" H 4600 1850 50  0001 C CNN
+	1    4600 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 1400 4600 1350
+Wire Wire Line
+	4600 1700 4600 1800
+Wire Wire Line
+	4150 1350 4600 1350
+Connection ~ 4600 1350
+Wire Wire Line
+	4600 1350 4600 1250
+Wire Wire Line
+	4150 1800 4600 1800
+Connection ~ 4150 1800
+Connection ~ 4600 1800
+Wire Wire Line
+	4600 1800 4600 1850
+Wire Wire Line
+	2650 1350 2100 1350
+Text Label 2100 1350 2    50   ~ 0
+AC125A_B0
+Text Label 2100 1550 2    50   ~ 0
+AC125A_G0
+Text GLabel 3300 5350 0    50   Input ~ 0
+AC125A_G2
+Text GLabel 3300 4950 0    50   Input ~ 0
+AC125A_G1
+Text GLabel 3300 4750 0    50   Output ~ 0
+AC125A_C1
+Text GLabel 3300 4650 0    50   Output ~ 0
+AC125A_PD1
+Text GLabel 3300 4550 0    50   Output ~ 0
+AC125A_PB1
+Text GLabel 3300 4350 0    50   Input ~ 0
+AC125A_R1
+Text GLabel 1550 4150 0    50   Input ~ 0
+AC125A_G0
+Text GLabel 3300 3950 0    50   Output ~ 0
+AC125A_C0
+Text GLabel 3300 3850 0    50   Output ~ 0
+AC125A_PD0
+Text GLabel 3300 3750 0    50   Output ~ 0
+AC125A_PB0
+Text Label 3850 5350 2    50   ~ 0
+AC125A_G2
+Wire Wire Line
+	3300 5350 3900 5350
+Wire Wire Line
+	3300 3550 3300 2600
+Text Label 3750 4950 2    50   ~ 0
+AC125A_G1
+Wire Wire Line
+	3900 4950 3300 4950
+Wire Wire Line
+	3300 4750 3900 4750
+Text Label 3800 4750 2    50   ~ 0
+AC125A_C1
+Wire Wire Line
+	3300 4650 3900 4650
+Text Label 3800 4650 2    50   ~ 0
+AC125A_PD1
+Wire Wire Line
+	3300 4550 3900 4550
+Text Label 3800 4550 2    50   ~ 0
+AC125A_PB1
+Text Label 3800 4350 2    50   ~ 0
+AC125A_R1
+Wire Wire Line
+	3300 4350 3900 4350
+Text Label 2200 4150 2    50   ~ 0
+AC125A_G0
+Wire Wire Line
+	3300 3950 3900 3950
+Text Label 3800 3950 2    50   ~ 0
+AC125A_C0
+Wire Wire Line
+	3300 3850 3900 3850
+Text Label 3800 3850 2    50   ~ 0
+AC125A_PD0
+Wire Wire Line
+	3300 3750 3900 3750
+Text Label 3800 3750 2    50   ~ 0
+AC125A_PB0
+Text Label 3800 3550 2    50   ~ 0
+AC125A_R0
+Wire Wire Line
+	3300 3550 3900 3550
+Connection ~ 2300 1550
+Wire Wire Line
+	2300 1550 2650 1550
+Wire Wire Line
+	2100 1550 2300 1550
+Wire Wire Line
+	3300 2600 6350 2600
+Wire Wire Line
+	6350 3650 6900 3650
+Wire Wire Line
+	6250 3850 6900 3850
+Wire Wire Line
+	6200 4650 6900 4650
+Wire Wire Line
+	6900 4450 6300 4450
+Text Label 6300 4450 0    50   ~ 0
+AC125A_R1
+Wire Wire Line
+	4900 4350 6900 4350
+Wire Wire Line
+	4900 3550 6900 3550
+$Comp
+L Device:R_US R?
+U 1 1 5ECDB77F
+P 5950 1250
+AR Path="/5BAA648F/5ECDB77F" Ref="R?"  Part="1" 
+AR Path="/5BA4B80D/5ECDB77F" Ref="R?"  Part="1" 
+AR Path="/5EBEBADD/5ECDB77F" Ref="R?"  Part="1" 
+AR Path="/5ECDB77F" Ref="R37"  Part="1" 
+F 0 "R37" V 5745 1250 50  0000 C CNN
+F 1 "470" V 5836 1250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5990 1240 50  0001 C CNN
+F 3 "~" H 5950 1250 50  0001 C CNN
+	1    5950 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5ECDB785
+P 5950 1650
+AR Path="/5BAA648F/5ECDB785" Ref="D?"  Part="1" 
+AR Path="/5BA4B80D/5ECDB785" Ref="D?"  Part="1" 
+AR Path="/5EBEBADD/5ECDB785" Ref="D?"  Part="1" 
+AR Path="/5ECDB785" Ref="D9"  Part="1" 
+F 0 "D9" V 5988 1533 50  0000 R CNN
+F 1 "LED" V 5897 1533 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm" H 5950 1650 50  0001 C CNN
+F 3 "~" H 5950 1650 50  0001 C CNN
+	1    5950 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5ECDB78E
+P 5950 950
+AR Path="/5BAA648F/5ECDB78E" Ref="#PWR?"  Part="1" 
+AR Path="/5BA4B80D/5ECDB78E" Ref="#PWR?"  Part="1" 
+AR Path="/5EBEBADD/5ECDB78E" Ref="#PWR?"  Part="1" 
+AR Path="/5ECDB78E" Ref="#PWR0108"  Part="1" 
+F 0 "#PWR0108" H 5950 800 50  0001 C CNN
+F 1 "+5V" H 5965 1123 50  0000 C CNN
+F 2 "" H 5950 950 50  0001 C CNN
+F 3 "" H 5950 950 50  0001 C CNN
+	1    5950 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5ECE5DBF
+P 5950 1900
+AR Path="/5ECE5DBF" Ref="#PWR0109"  Part="1" 
+AR Path="/5BA49F1B/5ECE5DBF" Ref="#PWR?"  Part="1" 
+AR Path="/5EBEBADD/5ECE5DBF" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0109" H 5950 1650 50  0001 C CNN
+F 1 "GND" H 5955 1727 50  0000 C CNN
+F 2 "" H 5950 1900 50  0001 C CNN
+F 3 "" H 5950 1900 50  0001 C CNN
+	1    5950 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 1900 5950 1800
+Wire Wire Line
+	5950 1500 5950 1400
+Wire Wire Line
+	5950 1100 5950 950 
+$Comp
+L Device:Fuse F1
+U 1 1 5EDDB981
+P 3200 4150
+F 0 "F1" V 3100 3800 50  0000 C CNN
+F 1 "Fuse 630mA" V 3094 4150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 3130 4150 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/littelfuse-inc/0251-630MXL/F2312-ND/700711" H 3200 4150 50  0001 C CNN
+	1    3200 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1550 4150 2300 4150
+Wire Wire Line
+	2300 1550 2300 4150
+Wire Wire Line
+	3900 4150 3350 4150
+Wire Wire Line
+	3050 4150 2300 4150
+Connection ~ 2300 4150
+$Comp
+L Device:Fuse F2
+U 1 1 5EDF6278
+P 5400 4150
+F 0 "F2" V 5300 3800 50  0000 C CNN
+F 1 "Fuse 630mA" V 5294 4150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 5330 4150 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/littelfuse-inc/0251-630MXL/F2312-ND/700711" H 5400 4150 50  0001 C CNN
+	1    5400 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5550 4150 6200 4150
+Wire Wire Line
+	5250 4150 4900 4150
+Text Notes 7500 7500 0    50   ~ 0
+OKI AC125A DTMF Converter - PBX Interface and Power Supply
+Text Notes 8200 7650 0    50   ~ 0
+2020-05-17
+Text Notes 10600 7650 0    50   ~ 0
+1
+Text Notes 6250 1700 0    50   ~ 0
+Power LED
+Text Notes 7100 6850 0    100  Italic 20
+OKI AC125A Crossbar PBX DTMF Converter
+Text Notes 7150 7000 0    50   ~ 0
+(c) 2020, Howard M. Harte - WZ2Q
+NoConn ~ 3900 3650
+NoConn ~ 3900 4050
+NoConn ~ 3900 4250
+NoConn ~ 3900 4450
+NoConn ~ 3900 4850
+NoConn ~ 3900 5050
+NoConn ~ 3900 5150
+NoConn ~ 3900 5250
+NoConn ~ 3900 5450
+NoConn ~ 3900 5550
+NoConn ~ 3900 5650
+NoConn ~ 3900 5750
+NoConn ~ 3900 5850
+NoConn ~ 3900 5950
+NoConn ~ 4900 5950
+NoConn ~ 4900 5850
+NoConn ~ 4900 5750
+NoConn ~ 4900 5650
+NoConn ~ 4900 5550
+NoConn ~ 4900 5450
+NoConn ~ 4900 5250
+NoConn ~ 4900 5050
+NoConn ~ 4900 4850
+NoConn ~ 4900 4250
+NoConn ~ 4900 4050
+$Comp
+L ac125a_dtmf:112-050-113R001 J1
+U 1 1 5ECC0265
+P 4400 6250
+F 0 "J1" V 7581 6250 50  0000 C CNN
+F 1 "112-050-113R001" V 7490 6250 50  0000 C CNN
+F 2 "112050113R001" H 7250 6550 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/112-050-113R001.pdf" H 7250 6450 50  0001 L CNN
+F 4 "NORCOMP - 112-050-113R001 - CONNECTOR, RJ21X, PLUG, 50POS, THT" H 7250 6350 50  0001 L CNN "Description"
+F 5 "15.55" H 7250 6250 50  0001 L CNN "Height"
+F 6 "636-112-050-113R001" H 7250 6150 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/NorComp/112-050-113R001?qs=IGgAdOvCTsTJzLtBbmM05Q%3D%3D" H 7250 6050 50  0001 L CNN "Mouser Price/Stock"
+F 8 "NorComp" H 7250 5950 50  0001 L CNN "Manufacturer_Name"
+F 9 "112-050-113R001" H 7250 5850 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4400 6250
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC

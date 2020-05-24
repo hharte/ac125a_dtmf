@@ -44,7 +44,7 @@
 #include "mcc_generated_files/mcc.h"
 #include <stdio.h>
 
-#define RS232_CONSOLE
+//#define RS232_CONSOLE
 
 extern uint8_t ac125a_main(uint8_t rcon_copy);
 
