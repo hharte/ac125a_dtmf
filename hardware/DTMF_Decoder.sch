@@ -79,7 +79,7 @@ AR Path="/5EC4FBAE" Ref="R?"  Part="1"
 AR Path="/5EBEBADD/5EC4FBAE" Ref="R?"  Part="1" 
 AR Path="/5EBEBADD/5EC472FB/5EC4FBAE" Ref="R11"  Part="1" 
 F 0 "R11" V 4545 2350 50  0000 C CNN
-F 1 "47K" V 4636 2350 50  0000 C CNN
+F 1 "68K" V 4636 2350 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4790 2340 50  0001 C CNN
 F 3 "~" H 4750 2350 50  0001 C CNN
 	1    4750 2350
@@ -95,7 +95,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 2100 5300 2100
 Wire Wire Line
-	5300 2600 4750 2600
+	5300 2600 5100 2600
 Wire Wire Line
 	4750 2600 4750 2500
 Wire Wire Line
@@ -519,7 +519,7 @@ AR Path="/5EC88F42" Ref="R?"  Part="1"
 AR Path="/5EBEBADD/5EC88F42" Ref="R?"  Part="1" 
 AR Path="/5EBEBADD/5EC472FB/5EC88F42" Ref="R13"  Part="1" 
 F 0 "R13" V 4545 5800 50  0000 C CNN
-F 1 "47K" V 4636 5800 50  0000 C CNN
+F 1 "68K" V 4636 5800 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4790 5790 50  0001 C CNN
 F 3 "~" H 4750 5800 50  0001 C CNN
 	1    4750 5800
@@ -535,7 +535,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 5550 5300 5550
 Wire Wire Line
-	5300 6050 4750 6050
+	5300 6050 5100 6050
 Wire Wire Line
 	4750 6050 4750 5950
 Wire Wire Line
@@ -854,9 +854,9 @@ Wire Wire Line
 	5050 3050 5050 3300
 Connection ~ 5050 3050
 Wire Wire Line
-	5050 3600 5050 6500
+	5050 3600 5050 6150
 Wire Wire Line
-	5050 6500 5300 6500
+	5050 6150 5300 6150
 Wire Wire Line
 	4600 4900 4650 4900
 Wire Wire Line
@@ -875,17 +875,63 @@ F 3 "~" H 4800 4900 50  0001 C CNN
 	1    4800 4900
 	0    1    1    0   
 $EndComp
-NoConn ~ 5300 6150
 Wire Wire Line
 	6100 2850 7200 2850
 Text Notes 7450 7500 0    50   ~ 0
 OKI AC125A DTMF Converter - Telco Interface and DTMF Converters
 Text Notes 8150 7650 0    50   ~ 0
-2020-05-17
+2020-05-29
 Text Notes 10550 7650 0    50   ~ 0
-1
+2
 Text Notes 7100 6850 0    100  Italic 20
 OKI AC125A Crossbar PBX DTMF Converter
 Text Notes 7150 7000 0    50   ~ 0
 (c) 2020, Howard M. Harte - WZ2Q
+$Comp
+L Device:R_US R?
+U 1 1 5ED2D7C2
+P 5100 2350
+AR Path="/5ED2D7C2" Ref="R?"  Part="1" 
+AR Path="/5EBEBADD/5ED2D7C2" Ref="R?"  Part="1" 
+AR Path="/5EBEBADD/5EC472FB/5ED2D7C2" Ref="R20"  Part="1" 
+F 0 "R20" V 4895 2350 50  0000 C CNN
+F 1 "100K" V 4986 2350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5140 2340 50  0001 C CNN
+F 3 "~" H 5100 2350 50  0001 C CNN
+	1    5100 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2500 5100 2600
+Connection ~ 5100 2600
+Wire Wire Line
+	5100 2600 4750 2600
+Wire Wire Line
+	5100 2200 5300 2200
+Wire Wire Line
+	5300 2200 5300 2350
+$Comp
+L Device:R_US R?
+U 1 1 5ED37EDC
+P 5100 5800
+AR Path="/5ED37EDC" Ref="R?"  Part="1" 
+AR Path="/5EBEBADD/5ED37EDC" Ref="R?"  Part="1" 
+AR Path="/5EBEBADD/5EC472FB/5ED37EDC" Ref="R40"  Part="1" 
+F 0 "R40" V 4895 5800 50  0000 C CNN
+F 1 "100K" V 4986 5800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5140 5790 50  0001 C CNN
+F 3 "~" H 5100 5800 50  0001 C CNN
+	1    5100 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 5950 5100 6050
+Wire Wire Line
+	5100 5650 5300 5650
+Wire Wire Line
+	5300 5650 5300 5800
+Connection ~ 5100 6050
+Wire Wire Line
+	5100 6050 4750 6050
+NoConn ~ 5300 6500
 $EndSCHEMATC

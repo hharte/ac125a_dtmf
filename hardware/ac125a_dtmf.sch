@@ -36,44 +36,45 @@ F16 "ACT125A_PC1" I R 8150 4550 50
 F17 "ACT125A_PD1" I R 8150 4650 50 
 F18 "ACT125A_PE1" I R 8150 4750 50 
 F19 "ACT125A_C1" I R 8150 4850 50 
+F20 "AC125A_B0" I L 6900 4150 50 
 $EndSheet
 Text Label 5400 3550 2    50   ~ 0
 AC125A_T0
 Text Label 5400 3650 2    50   ~ 0
 AC125A_ST0
-Text Label 5400 3750 2    50   ~ 0
+Text Label 5500 3750 2    50   ~ 0
 AC125A_PA0
 Wire Wire Line
 	4900 3750 5500 3750
-Text Label 5400 3850 2    50   ~ 0
+Text Label 5500 3850 2    50   ~ 0
 AC125A_PC0
 Wire Wire Line
 	4900 3850 5500 3850
-Text Label 5400 3950 2    50   ~ 0
+Text Label 5500 3950 2    50   ~ 0
 AC125A_PE0
 Wire Wire Line
 	4900 3950 5500 3950
 Text Label 6150 4150 2    50   ~ 0
 AC125A_B0
-Text Label 5400 4350 2    50   ~ 0
+Text Label 5500 4350 2    50   ~ 0
 AC125A_T1
-Text Label 5400 4450 2    50   ~ 0
+Text Label 5500 4450 2    50   ~ 0
 AC125A_ST1
-Text Label 5400 4550 2    50   ~ 0
+Text Label 5500 4550 2    50   ~ 0
 AC125A_PA1
 Wire Wire Line
 	4900 4550 5500 4550
-Text Label 5400 4650 2    50   ~ 0
+Text Label 5500 4650 2    50   ~ 0
 AC125A_PC1
 Wire Wire Line
 	4900 4650 5500 4650
-Text Label 5400 4750 2    50   ~ 0
+Text Label 5500 4750 2    50   ~ 0
 AC125A_PE1
 Wire Wire Line
 	4900 4750 5500 4750
 Wire Wire Line
 	4900 4950 5500 4950
-Text Label 5450 4950 2    50   ~ 0
+Text Label 5500 4950 2    50   ~ 0
 AC125A_B1
 Wire Wire Line
 	6350 2600 6350 3650
@@ -93,72 +94,30 @@ Wire Wire Line
 	4900 5350 5500 5350
 Text Label 5450 5350 2    50   ~ 0
 AC125A_B2
-Text GLabel 8900 3650 2    50   Output ~ 0
-AC125A_PB0
 Wire Wire Line
 	8150 3650 8900 3650
-Text GLabel 8900 3550 2    50   Output ~ 0
-AC125A_PA0
 Wire Wire Line
 	8150 3550 8900 3550
-Text GLabel 8900 3850 2    50   Output ~ 0
-AC125A_PD0
 Wire Wire Line
 	8150 3850 8900 3850
-Text GLabel 8900 3750 2    50   Output ~ 0
-AC125A_PC0
 Wire Wire Line
 	8150 3750 8900 3750
-Text GLabel 8900 4050 2    50   Output ~ 0
-AC125A_C0
 Wire Wire Line
 	8150 4050 8900 4050
-Text GLabel 8900 3950 2    50   Output ~ 0
-AC125A_PE0
 Wire Wire Line
 	8150 3950 8900 3950
-Text GLabel 8900 4450 2    50   Output ~ 0
-AC125A_PB1
 Wire Wire Line
 	8150 4450 8900 4450
-Text GLabel 8900 4350 2    50   Output ~ 0
-AC125A_PA1
 Wire Wire Line
 	8150 4350 8900 4350
-Text GLabel 8900 4650 2    50   Output ~ 0
-AC125A_PD1
 Wire Wire Line
 	8150 4650 8900 4650
-Text GLabel 8900 4550 2    50   Output ~ 0
-AC125A_PC1
 Wire Wire Line
 	8150 4550 8900 4550
-Text GLabel 8900 4850 2    50   Output ~ 0
-AC125A_C1
 Wire Wire Line
 	8150 4850 8900 4850
-Text GLabel 8900 4750 2    50   Output ~ 0
-AC125A_PE1
 Wire Wire Line
 	8150 4750 8900 4750
-Text GLabel 5500 3850 2    50   Output ~ 0
-AC125A_PC0
-Text GLabel 5500 3750 2    50   Output ~ 0
-AC125A_PA0
-Text GLabel 5500 3950 2    50   Output ~ 0
-AC125A_PE0
-Text GLabel 6200 4150 2    50   Input ~ 0
-AC125A_B0
-Text GLabel 5500 4650 2    50   Output ~ 0
-AC125A_PC1
-Text GLabel 5500 4550 2    50   Output ~ 0
-AC125A_PA1
-Text GLabel 5500 4750 2    50   Output ~ 0
-AC125A_PE1
-Text GLabel 5500 4950 2    50   Input ~ 0
-AC125A_B1
-Text GLabel 5500 5350 2    50   Input ~ 0
-AC125A_B2
 $Comp
 L Device:CP1 C17
 U 1 1 5F0A01A2
@@ -255,65 +214,43 @@ Text Label 2100 1350 2    50   ~ 0
 AC125A_B0
 Text Label 2100 1550 2    50   ~ 0
 AC125A_G0
-Text GLabel 3300 5350 0    50   Input ~ 0
+Text Label 3300 5350 2    50   ~ 0
 AC125A_G2
-Text GLabel 3300 4950 0    50   Input ~ 0
-AC125A_G1
-Text GLabel 3300 4750 0    50   Output ~ 0
-AC125A_C1
-Text GLabel 3300 4650 0    50   Output ~ 0
-AC125A_PD1
-Text GLabel 3300 4550 0    50   Output ~ 0
-AC125A_PB1
-Text GLabel 3300 4350 0    50   Input ~ 0
-AC125A_R1
-Text GLabel 1550 4150 0    50   Input ~ 0
-AC125A_G0
-Text GLabel 3300 3950 0    50   Output ~ 0
-AC125A_C0
-Text GLabel 3300 3850 0    50   Output ~ 0
-AC125A_PD0
-Text GLabel 3300 3750 0    50   Output ~ 0
-AC125A_PB0
-Text Label 3850 5350 2    50   ~ 0
-AC125A_G2
-Wire Wire Line
-	3300 5350 3900 5350
 Wire Wire Line
 	3300 3550 3300 2600
-Text Label 3750 4950 2    50   ~ 0
+Text Label 3300 4950 2    50   ~ 0
 AC125A_G1
 Wire Wire Line
 	3900 4950 3300 4950
 Wire Wire Line
 	3300 4750 3900 4750
-Text Label 3800 4750 2    50   ~ 0
+Text Label 3300 4750 2    50   ~ 0
 AC125A_C1
 Wire Wire Line
 	3300 4650 3900 4650
-Text Label 3800 4650 2    50   ~ 0
+Text Label 3300 4650 2    50   ~ 0
 AC125A_PD1
 Wire Wire Line
 	3300 4550 3900 4550
-Text Label 3800 4550 2    50   ~ 0
+Text Label 3300 4550 2    50   ~ 0
 AC125A_PB1
-Text Label 3800 4350 2    50   ~ 0
+Text Label 3300 4350 2    50   ~ 0
 AC125A_R1
 Wire Wire Line
 	3300 4350 3900 4350
-Text Label 2200 4150 2    50   ~ 0
+Text Label 2800 4150 2    50   ~ 0
 AC125A_G0
 Wire Wire Line
 	3300 3950 3900 3950
-Text Label 3800 3950 2    50   ~ 0
+Text Label 3300 3950 2    50   ~ 0
 AC125A_C0
 Wire Wire Line
 	3300 3850 3900 3850
-Text Label 3800 3850 2    50   ~ 0
+Text Label 3300 3850 2    50   ~ 0
 AC125A_PD0
 Wire Wire Line
 	3300 3750 3900 3750
-Text Label 3800 3750 2    50   ~ 0
+Text Label 3300 3750 2    50   ~ 0
 AC125A_PB0
 Text Label 3800 3550 2    50   ~ 0
 AC125A_R0
@@ -417,14 +354,11 @@ F 3 "https://www.digikey.com/product-detail/en/littelfuse-inc/0251-630MXL/F2312-
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1550 4150 2300 4150
-Wire Wire Line
 	2300 1550 2300 4150
 Wire Wire Line
-	3900 4150 3350 4150
+	3900 4150 3700 4150
 Wire Wire Line
 	3050 4150 2300 4150
-Connection ~ 2300 4150
 $Comp
 L Device:Fuse F2
 U 1 1 5EDF6278
@@ -437,15 +371,13 @@ F 3 "https://www.digikey.com/product-detail/en/littelfuse-inc/0251-630MXL/F2312-
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5550 4150 6200 4150
-Wire Wire Line
 	5250 4150 4900 4150
 Text Notes 7500 7500 0    50   ~ 0
 OKI AC125A DTMF Converter - PBX Interface and Power Supply
 Text Notes 8200 7650 0    50   ~ 0
-2020-05-17
+2020-05-24
 Text Notes 10600 7650 0    50   ~ 0
-1
+2
 Text Notes 6250 1700 0    50   ~ 0
 Power LED
 Text Notes 7100 6850 0    100  Italic 20
@@ -481,8 +413,8 @@ $Comp
 L ac125a_dtmf:112-050-113R001 J1
 U 1 1 5ECC0265
 P 4400 6250
-F 0 "J1" V 7581 6250 50  0000 C CNN
-F 1 "112-050-113R001" V 7490 6250 50  0000 C CNN
+F 0 "J1" V 7700 6250 50  0000 C CNN
+F 1 "112-050-113R001" V 7600 6250 50  0000 C CNN
 F 2 "112050113R001" H 7250 6550 50  0001 L CNN
 F 3 "https://componentsearchengine.com/Datasheets/1/112-050-113R001.pdf" H 7250 6450 50  0001 L CNN
 F 4 "NORCOMP - 112-050-113R001 - CONNECTOR, RJ21X, PLUG, 50POS, THT" H 7250 6350 50  0001 L CNN "Description"
@@ -494,4 +426,52 @@ F 9 "112-050-113R001" H 7250 5850 50  0001 L CNN "Manufacturer_Part_Number"
 	1    4400 6250
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	4400 6250 4400 6350
+Wire Wire Line
+	4400 6350 3700 6350
+Wire Wire Line
+	3700 3150 4400 3150
+Wire Wire Line
+	4400 3150 4400 3250
+Wire Wire Line
+	5550 4150 6900 4150
+Wire Wire Line
+	3700 3150 3700 4150
+Connection ~ 3700 4150
+Wire Wire Line
+	3700 4150 3350 4150
+Wire Wire Line
+	3300 5350 3900 5350
+Wire Wire Line
+	3700 6350 3700 4150
+NoConn ~ 5500 5150
+Text Label 8900 4050 2    50   ~ 0
+AC125A_C0
+Text Label 8900 3750 2    50   ~ 0
+AC125A_PC0
+Text Label 8900 3550 2    50   ~ 0
+AC125A_PA0
+Text Label 8900 3650 2    50   ~ 0
+AC125A_PB0
+Text Label 8900 3850 2    50   ~ 0
+AC125A_PD0
+Text Label 8900 3950 2    50   ~ 0
+AC125A_PE0
+NoConn ~ 5500 4950
+NoConn ~ 3300 4950
+NoConn ~ 3300 5350
+NoConn ~ 5500 5350
+Text Label 8900 4450 2    50   ~ 0
+AC125A_PB1
+Text Label 8900 4850 2    50   ~ 0
+AC125A_C1
+Text Label 8900 4650 2    50   ~ 0
+AC125A_PD1
+Text Label 8900 4350 2    50   ~ 0
+AC125A_PA1
+Text Label 8900 4550 2    50   ~ 0
+AC125A_PC1
+Text Label 8900 4750 2    50   ~ 0
+AC125A_PE1
 $EndSCHEMATC

@@ -73,8 +73,8 @@ U 1 1 5EC2B537
 P 6600 5850
 AR Path="/5EC2B537" Ref="C?"  Part="1" 
 AR Path="/5EBEBADD/5EC2B537" Ref="C3"  Part="1" 
-F 0 "C3" H 6715 5896 50  0000 L CNN
-F 1 "NP" H 6715 5805 50  0000 L CNN
+F 0 "C3" H 6300 5950 50  0000 L CNN
+F 1 "0.01uF" H 6150 5850 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 6638 5700 50  0001 C CNN
 F 3 "~" H 6600 5850 50  0001 C CNN
 	1    6600 5850
@@ -101,7 +101,7 @@ P 7150 5650
 AR Path="/5EC2B545" Ref="R?"  Part="1" 
 AR Path="/5EBEBADD/5EC2B545" Ref="R1"  Part="1" 
 F 0 "R1" V 6945 5650 50  0000 C CNN
-F 1 "10K" V 7036 5650 50  0000 C CNN
+F 1 "4.7K" V 7036 5650 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7190 5640 50  0001 C CNN
 F 3 "~" H 7150 5650 50  0001 C CNN
 	1    7150 5650
@@ -114,31 +114,29 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x06_Male J?
 U 1 1 5EC2B556
-P 2450 4550
+P 2550 4950
 AR Path="/5EC2B556" Ref="J?"  Part="1" 
 AR Path="/5EBEBADD/5EC2B556" Ref="J2"  Part="1" 
-F 0 "J2" H 2558 4931 50  0000 C CNN
-F 1 "Conn_01x06_Male" H 2558 4840 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2450 4550 50  0001 C CNN
-F 3 "~" H 2450 4550 50  0001 C CNN
-	1    2450 4550
-	1    0    0    -1  
+F 0 "J2" H 2658 5331 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 2658 5240 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2550 4950 50  0001 C CNN
+F 3 "~" H 2550 4950 50  0001 C CNN
+	1    2550 4950
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5EC2B55C
-P 2850 4550
+P 3400 5150
 AR Path="/5EC2B55C" Ref="#PWR?"  Part="1" 
 AR Path="/5EBEBADD/5EC2B55C" Ref="#PWR06"  Part="1" 
-F 0 "#PWR06" H 2850 4300 50  0001 C CNN
-F 1 "GND" H 2855 4377 50  0000 C CNN
-F 2 "" H 2850 4550 50  0001 C CNN
-F 3 "" H 2850 4550 50  0001 C CNN
-	1    2850 4550
+F 0 "#PWR06" H 3400 4900 50  0001 C CNN
+F 1 "GND" H 3405 4977 50  0000 C CNN
+F 2 "" H 3400 5150 50  0001 C CNN
+F 3 "" H 3400 5150 50  0001 C CNN
+	1    3400 5150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2650 4550 2850 4550
 $Comp
 L power:+5V #PWR?
 U 1 1 5EC2B563
@@ -155,26 +153,16 @@ $EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 5EC2B569
-P 2850 4450
+P 2900 4500
 AR Path="/5EC2B569" Ref="#PWR?"  Part="1" 
 AR Path="/5EBEBADD/5EC2B569" Ref="#PWR05"  Part="1" 
-F 0 "#PWR05" H 2850 4300 50  0001 C CNN
-F 1 "+5V" H 2865 4623 50  0000 C CNN
-F 2 "" H 2850 4450 50  0001 C CNN
-F 3 "" H 2850 4450 50  0001 C CNN
-	1    2850 4450
+F 0 "#PWR05" H 2900 4350 50  0001 C CNN
+F 1 "+5V" H 2915 4673 50  0000 C CNN
+F 2 "" H 2900 4500 50  0001 C CNN
+F 3 "" H 2900 4500 50  0001 C CNN
+	1    2900 4500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2850 4450 2650 4450
-Wire Wire Line
-	2650 4850 4250 4850
-Wire Wire Line
-	2650 4750 4250 4750
-Wire Wire Line
-	2650 4350 3200 4350
-Wire Wire Line
-	3200 4350 3200 6500
 Wire Wire Line
 	3200 6500 6450 6500
 Wire Wire Line
@@ -245,11 +233,6 @@ Wire Wire Line
 Wire Wire Line
 	7000 5650 6900 5650
 Connection ~ 6900 5650
-Wire Wire Line
-	4000 4550 4250 4550
-Wire Wire Line
-	4000 4450 4250 4450
-NoConn ~ 2650 4650
 Text Label 6950 3650 0    50   ~ 0
 UART_TX
 Text Label 6950 3750 0    50   ~ 0
@@ -259,9 +242,9 @@ Wire Wire Line
 Wire Wire Line
 	7550 1250 7550 3550
 Text Label 6950 3450 0    50   ~ 0
-USB_DM
+USB_D-
 Text Label 6950 3550 0    50   ~ 0
-USB_DP
+USB_D+
 Text Label 3600 4750 0    50   ~ 0
 ICSP_PGC
 Text Label 3600 4850 0    50   ~ 0
@@ -370,13 +353,13 @@ Wire Wire Line
 Wire Wire Line
 	2950 2400 2600 2400
 Wire Wire Line
-	2600 1800 3350 1800
+	2600 1800 3100 1800
 Wire Wire Line
-	2600 1900 3250 1900
+	2600 1900 3100 1900
 Wire Wire Line
-	2600 2000 3150 2000
+	2600 2000 3100 2000
 Wire Wire Line
-	2600 2100 3050 2100
+	2600 2100 3100 2100
 Wire Wire Line
 	2600 2900 2850 2900
 Wire Wire Line
@@ -780,13 +763,13 @@ Wire Wire Line
 	6450 5050 6900 5050
 Text Label 6900 5050 0    50   ~ 0
 DTMF0_Q3
-Text Label 2650 2100 0    50   ~ 0
+Text Label 3100 2100 0    50   ~ 0
 DTMF0_Q3
-Text Label 2650 2000 0    50   ~ 0
+Text Label 3100 2000 0    50   ~ 0
 DTMF0_Q2
-Text Label 2650 1900 0    50   ~ 0
+Text Label 3100 1900 0    50   ~ 0
 DTMF0_Q1
-Text Label 2650 1800 0    50   ~ 0
+Text Label 3100 1800 0    50   ~ 0
 DTMF0_Q0
 Wire Wire Line
 	6450 5150 6900 5150
@@ -802,11 +785,11 @@ Text Label 3800 3650 0    50   ~ 0
 DTMF0_Q0
 Wire Wire Line
 	2600 2700 3100 2700
-Text Label 2650 2700 0    50   ~ 0
+Text Label 3100 2700 0    50   ~ 0
 DTMF1_Q1
 Wire Wire Line
 	3100 2600 2600 2600
-Text Label 2650 2600 0    50   ~ 0
+Text Label 3100 2600 0    50   ~ 0
 DTMF1_Q0
 Wire Wire Line
 	6900 4850 6450 4850
@@ -822,7 +805,7 @@ Text Label 6900 4650 0    50   ~ 0
 DTMF1_Q0
 Wire Wire Line
 	3100 2800 2600 2800
-Text Label 2650 2800 0    50   ~ 0
+Text Label 3100 2800 0    50   ~ 0
 DTMF1_Q2
 Wire Wire Line
 	4250 3150 3300 3150
@@ -1125,9 +1108,9 @@ LCD_DB5
 Text Notes 7450 7500 0    50   ~ 0
 OKI AC125A DTMF Converter - Microcontroller and Peripherals
 Text Notes 8150 7650 0    50   ~ 0
-2020-05-17
+2020-05-24
 Text Notes 10550 7650 0    50   ~ 0
-1
+2
 Text Notes 8300 1300 0    50   ~ 0
 OR0 Active
 Text Notes 8350 3050 0    50   ~ 0
@@ -1141,4 +1124,25 @@ Wire Wire Line
 Wire Wire Line
 	9250 1650 9400 1650
 NoConn ~ 6450 3350
+Wire Wire Line
+	3200 6500 3200 5150
+Wire Wire Line
+	3200 5150 2750 5150
+Wire Wire Line
+	2750 5050 2900 5050
+Wire Wire Line
+	2900 5050 2900 4500
+Wire Wire Line
+	2750 4950 3400 4950
+Wire Wire Line
+	3400 4950 3400 5150
+Wire Wire Line
+	2750 4850 4250 4850
+Wire Wire Line
+	2750 4750 4250 4750
+NoConn ~ 2750 4650
+Text Notes 7000 6150 0    50   Italic 0
+Layout note:\nReset circuit should be close to the pin on the MCU.
+NoConn ~ 4250 4550
+NoConn ~ 4250 4450
 $EndSCHEMATC

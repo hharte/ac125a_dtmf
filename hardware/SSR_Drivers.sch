@@ -629,29 +629,6 @@ Wire Wire Line
 Wire Wire Line
 	1600 1400 1600 1550
 $Comp
-L Device:R_US R?
-U 1 1 5EDA0428
-P 2100 2050
-AR Path="/5EDA0428" Ref="R?"  Part="1" 
-AR Path="/5EBEBADD/5EDA0428" Ref="R?"  Part="1" 
-AR Path="/5EBEBADD/5ECC2A81/5EDA0428" Ref="R20"  Part="1" 
-F 0 "R20" V 1895 2050 50  0000 C CNN
-F 1 "1K" V 1986 2050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2140 2040 50  0001 C CNN
-F 3 "~" H 2100 2050 50  0001 C CNN
-	1    2100 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2100 1900 2100 1750
-Wire Wire Line
-	2100 1750 2900 1750
-Wire Wire Line
-	2900 1750 2900 2150
-Wire Wire Line
-	2900 1750 2900 1600
-Connection ~ 2900 1750
-$Comp
 L power:+5V #PWR?
 U 1 1 5EDAC102
 P 2900 1600
@@ -850,8 +827,6 @@ Wire Wire Line
 Wire Wire Line
 	2500 2550 2000 2550
 Wire Wire Line
-	2100 2650 2100 2200
-Wire Wire Line
 	2000 2550 2000 5200
 Connection ~ 2000 5200
 Wire Wire Line
@@ -865,7 +840,6 @@ Wire Wire Line
 Connection ~ 2100 5300
 Wire Wire Line
 	2100 5300 2500 5300
-Connection ~ 2100 2650
 Text HLabel 1000 5200 0    50   Input ~ 0
 SSR_SRCLK
 Text Notes 7500 7500 0    50   ~ 0
@@ -878,4 +852,6 @@ Text Notes 7100 6850 0    100  Italic 20
 OKI AC125A Crossbar PBX DTMF Converter
 Text Notes 7150 7000 0    50   ~ 0
 (c) 2020, Howard M. Harte - WZ2Q
+Wire Wire Line
+	2900 1600 2900 2150
 $EndSCHEMATC
