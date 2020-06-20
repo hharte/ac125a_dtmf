@@ -41,7 +41,10 @@
 #include  <stdint.h>
 #include "mcc_generated_files/mcc.h"
 
+//#define CONSOLE_COMMANDS
+
 extern char getch(void);
+extern bool is_rx_ready(void);
 
 /* Function Prototypes */
 void DTMF0_ISR(void);
@@ -100,12 +103,11 @@ const char          menu[] = "1. Activate relay\n\r" \
                              "\n> ";
 
 volatile uint8_t dtmf_digit[ORIGINATING_REGISTER_MAX] = { 0 };
-volatile uint8_t last_dtmf_digit[ORIGINATING_REGISTER_MAX] = { 0 };
 
 static uint8_t dtmf_dial_state[ORIGINATING_REGISTER_MAX] = { DIAL_STATE_IDLE, DIAL_STATE_IDLE };
 
 
-uint16_t timer_tick = 0;
+volatile uint32_t timer_tick = 0;
 
 /* The interface from the OKI Originating Registers (ORs) consists
  * of a STart output which is grounded when the B relay in the OR
@@ -144,11 +146,27 @@ const unsigned char pc_relay_table[16] = {
     0                                                       // C (Not valid)
 };
 
+typedef struct dtmf_event_record {
+    uint32_t timestamp;
+    uint16_t dtmf_duration;
+    uint8_t or;
+    uint8_t dtmf_digit;    
+} dtmf_event_record_t;
+
+typedef struct {
+    uint8_t r_index;
+    uint8_t w_index;
+    dtmf_event_record_t events[8];
+} dtmf_events_t;
+
+dtmf_events_t dtmf_events[ORIGINATING_REGISTER_MAX];
+
 void DTMF0_ISR(void)
 {
     if (DTMF0_StD == 1) {   // Store DTMF digit to FIFO on rising edge of DTMF_ST_D
         dtmf_digit[0] = DTMF0_Q0 | (DTMF0_Q1 << 1) | (DTMF0_Q2 << 2) | (DTMF0_Q3 << 3);
-        last_dtmf_digit[0] = dtmf_digit[0];
+        dtmf_events[0].events[dtmf_events[0].w_index].timestamp = timer_tick;
+
     }
 }
 
@@ -156,7 +174,7 @@ void DTMF1_ISR(void)
 {
     if (DTMF1_StD == 1) {   // Store DTMF digit to FIFO on rising edge of DTMF_ST_D
         dtmf_digit[1] = DTMF1_Q0 | (DTMF1_Q1 << 1) | (DTMF1_Q2 << 2) | (DTMF1_Q3 << 3);
-        last_dtmf_digit[1] = dtmf_digit[1];
+        dtmf_events[1].events[dtmf_events[1].w_index].timestamp = timer_tick;
     }
 }
 
@@ -175,10 +193,15 @@ void TIMER0_ISR(void)
                 /* Waiting for DTMF from OR. */
                 if (dtmf_digit[or] > 0) {
                     dtmf_dial_state[or] = DIAL_STATE_WAIT_DTMF_DONE;
+                    dtmf_events[or].events[dtmf_events[or].w_index].or = or;
+                    dtmf_events[or].events[dtmf_events[or].w_index].dtmf_digit = dtmf_digit[or];
+                    dtmf_events[or].events[dtmf_events[or].w_index].dtmf_duration = 0;
                 }
                 break;
             case DIAL_STATE_WAIT_DTMF_DONE:
                 /* Wait in this state until DTMFx_StD is de-asserted. */
+                dtmf_events[or].events[dtmf_events[or].w_index].dtmf_duration += 20;
+                
                 if (or == 0) {
                     if (DTMF0_StD == 0) dtmf_dial_state[or] = DIAL_STATE_OPERATE_RELAYS;
                 } else if (or == 1) {
@@ -186,6 +209,11 @@ void TIMER0_ISR(void)
                 }
                 break;
             case DIAL_STATE_OPERATE_RELAYS:
+                dtmf_events[or].w_index ++;
+                if (dtmf_events[or].w_index == 8) {
+                    dtmf_events[or].w_index = 0;
+                }
+                
                 /* Operate the OKI AC125A Pulse Counting Relays */
                 pc_relays = pc_relay_table[dtmf_digit[or]];
                 dtmf_digit[or] = 0;         // Clear the stored DTMF digit after processing.
@@ -232,11 +260,17 @@ uint8_t ac125a_main(uint8_t rcon_copy)
     uint8_t cur_orig_register = 0;
     uint16_t selected_relay = 0;
     int i;
+    int or;
     char c;
 
     /* Reset 74HC595 shift registers */
     SSR_SRCLR_N = 0;
 
+    dtmf_events[0].w_index = 0;
+    dtmf_events[0].r_index = 0;
+    dtmf_events[1].w_index = 0;
+    dtmf_events[1].r_index = 0;
+    
     /* Register interrupt handlers for DTMF Receivers */
     INT0_SetInterruptHandler (DTMF0_ISR);
     INT1_SetInterruptHandler (DTMF1_ISR);
@@ -257,17 +291,33 @@ uint8_t ac125a_main(uint8_t rcon_copy)
     
     while (1) {
         
-        printf("\n\rCurrent OR %d\n\r", cur_orig_register);
+        for (or = 0; or < ORIGINATING_REGISTER_MAX; or++) {
+            while (dtmf_events[or].r_index != dtmf_events[or].w_index) {
+                if (dtmf_events[or].events[dtmf_events[or].r_index].timestamp == 0) continue;
+                printf("[%lu - OR%d: '%d' %dms index: %d\n\r", dtmf_events[or].events[dtmf_events[or].r_index].timestamp,
+                        dtmf_events[or].events[dtmf_events[or].r_index].or,
+                        dtmf_events[or].events[dtmf_events[or].r_index].dtmf_digit,
+                        dtmf_events[or].events[dtmf_events[or].r_index].dtmf_duration,
+                        dtmf_events[or].r_index);
+                dtmf_events[or].r_index++;
+                if (dtmf_events[or].r_index >= 8) {
+                    dtmf_events[or].r_index = 0;
+                }
+            }
+        }
+
+#ifdef CONSOLE_COMMANDS
+        printf("\n\rTimer_tick: %lu\n\r", timer_tick);
+        printf("Current OR %d\n\r", cur_orig_register);
         printf("RCON: %02x\n\r", rcon_copy);
         printf("Current relay %c\n\r", cur_relay + 'A');
         printf("Relay bits: 0x%04x\n\r", relay_state);
-        printf("OR0 Status: %s, dial_state: %d, digit: %d, last_digit: %d\n\r", OR0_STATUS_N ? "Idle" : "BUSY", dtmf_dial_state[0], dtmf_digit[0], last_dtmf_digit[0]);
-        printf("OR1 Status: %s, dial_state: %d, digit: %d, last_digit: %d\n\r", OR1_STATUS_N ? "Idle" : "BUSY",  dtmf_dial_state[1], dtmf_digit[1], last_dtmf_digit[1]);
-        printf("Timer_tick: %d\n\r", timer_tick);
-
+        printf("OR0 Status: %s, dial_state: %d\n\r", OR0_STATUS_N ? "Idle" : "BUSY", dtmf_dial_state[0]);
+        printf("OR1 Status: %s, dial_state: %d\n\r", OR1_STATUS_N ? "Idle" : "BUSY",  dtmf_dial_state[1]);
+        
         selected_relay = 1 << cur_relay;
         if (cur_orig_register == 1) {
-            selected_relay <<= 8; //selected_relay << 8;
+            selected_relay <<= 8;
         }
         
         printf("Selected Relay bit: 0x%04x\n\r", selected_relay);
@@ -345,6 +395,7 @@ uint8_t ac125a_main(uint8_t rcon_copy)
             printf("Invalid command '%c'", c);
             break;
         }
+#endif /* CONSOLE_COMMANDS */
     }
     return 0;
 }
