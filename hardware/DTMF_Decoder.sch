@@ -880,13 +880,11 @@ Wire Wire Line
 Text Notes 7450 7500 0    50   ~ 0
 OKI AC125A DTMF Converter - Telco Interface and DTMF Converters
 Text Notes 8150 7650 0    50   ~ 0
-2020-05-29
+2020-06-27
 Text Notes 10550 7650 0    50   ~ 0
 2
 Text Notes 7100 6850 0    100  Italic 20
 OKI AC125A Crossbar PBX DTMF Converter
-Text Notes 7150 7000 0    50   ~ 0
-(c) 2020, Howard M. Harte - WZ2Q
 $Comp
 L Device:R_US R?
 U 1 1 5ED2D7C2
@@ -934,4 +932,6 @@ Connection ~ 5100 6050
 Wire Wire Line
 	5100 6050 4750 6050
 NoConn ~ 5300 6500
+Text Notes 7100 7100 0    50   ~ 10
+(c) 2020, Howard M. Harte - WZ2Q\nhttps://github.com/hharte/ac125a_dtmf
 $EndSCHEMATC

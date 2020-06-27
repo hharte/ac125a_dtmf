@@ -315,8 +315,8 @@ Text Notes 10600 7650 0    50   ~ 0
 1
 Text Notes 8250 7650 0    50   ~ 0
 2020-05-17
-Text Notes 7100 6850 0    100  Italic 20
+Text Notes 7100 6800 0    100  Italic 20
 OKI AC125A Crossbar PBX DTMF Converter
-Text Notes 7150 7000 0    50   ~ 0
-(c) 2020, Howard M. Harte - WZ2Q
+Text Notes 7100 7050 0    50   ~ 10
+(c) 2020, Howard M. Harte - WZ2Q\nhttps://github.com/hharte/ac125a_dtmf
 $EndSCHEMATC

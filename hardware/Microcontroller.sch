@@ -14,19 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:+5V #PWR?
-U 1 1 5EC2B51D
-P 3950 800
-AR Path="/5EC2B51D" Ref="#PWR?"  Part="1" 
-AR Path="/5EBEBADD/5EC2B51D" Ref="#PWR01"  Part="1" 
-F 0 "#PWR01" H 3950 650 50  0001 C CNN
-F 1 "+5V" H 3965 973 50  0000 C CNN
-F 2 "" H 3950 800 50  0001 C CNN
-F 3 "" H 3950 800 50  0001 C CNN
-	1    3950 800 
-	1    0    0    -1  
-$EndComp
-$Comp
 L MCU_Microchip_PIC18:PIC18F4550-IP U?
 U 1 1 5EC2B523
 P 5350 4250
@@ -168,37 +155,6 @@ Wire Wire Line
 Wire Wire Line
 	6450 6500 6450 5350
 Connection ~ 6450 5350
-$Comp
-L Device:C C?
-U 1 1 5EC2B577
-P 3950 1000
-AR Path="/5EC2B577" Ref="C?"  Part="1" 
-AR Path="/5EBEBADD/5EC2B577" Ref="C1"  Part="1" 
-F 0 "C1" H 4065 1046 50  0000 L CNN
-F 1 "0.1uF" H 4065 955 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 3988 850 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/vishay-bc-components/K104Z15Y5VE5TL2/BC1148CT-ND/286770" H 3950 1000 50  0001 C CNN
-	1    3950 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5EC2B57D
-P 3950 1200
-AR Path="/5EC2B57D" Ref="#PWR?"  Part="1" 
-AR Path="/5BA49F1B/5EC2B57D" Ref="#PWR?"  Part="1" 
-AR Path="/5EBEBADD/5EC2B57D" Ref="#PWR02"  Part="1" 
-F 0 "#PWR02" H 3950 950 50  0001 C CNN
-F 1 "GND" H 3955 1027 50  0000 C CNN
-F 2 "" H 3950 1200 50  0001 C CNN
-F 3 "" H 3950 1200 50  0001 C CNN
-	1    3950 1200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3950 850  3950 800 
-Wire Wire Line
-	3950 1150 3950 1200
 $Comp
 L Device:C C?
 U 1 1 5EC2B58B
@@ -984,55 +940,12 @@ Wire Wire Line
 	8100 1050 8100 950 
 Wire Wire Line
 	7850 1050 8100 1050
-$Comp
-L ac125a_dtmf:DMC-16105-LY LCD1
-U 1 1 5EE28C31
-P 5550 1550
-F 0 "LCD1" H 5994 1596 50  0000 L CNN
-F 1 "DMC-16105-LY" H 5994 1505 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical" H 5550 750 50  0001 C CNN
-F 3 "https://media.digikey.com/pdf/data%20sheets/optrex%20pdfs/dmc-16105ny-ly-ann.pdf" H 5650 1450 50  0001 C CNN
-	1    5550 1550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7900 4450 8650 4450
 Wire Wire Line
 	7900 4350 8650 4350
 Wire Wire Line
 	7900 4150 8650 4150
-$Comp
-L power:GND #PWR0118
-U 1 1 5EE824BE
-P 5550 2300
-F 0 "#PWR0118" H 5550 2050 50  0001 C CNN
-F 1 "GND" H 5555 2127 50  0000 C CNN
-F 2 "" H 5550 2300 50  0001 C CNN
-F 3 "" H 5550 2300 50  0001 C CNN
-	1    5550 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5550 2300 5550 2250
-$Comp
-L power:+5V #PWR?
-U 1 1 5EE91B91
-P 5550 800
-AR Path="/5EE91B91" Ref="#PWR?"  Part="1" 
-AR Path="/5EBEBADD/5EE91B91" Ref="#PWR0119"  Part="1" 
-F 0 "#PWR0119" H 5550 650 50  0001 C CNN
-F 1 "+5V" H 5565 973 50  0000 C CNN
-F 2 "" H 5550 800 50  0001 C CNN
-F 3 "" H 5550 800 50  0001 C CNN
-	1    5550 800 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5550 850  5550 800 
-NoConn ~ 5150 1350
-NoConn ~ 5150 1450
-NoConn ~ 5150 1550
-NoConn ~ 5150 1650
 Text Label 7900 4150 0    50   ~ 0
 SSR_SER_DATA
 Text Label 3300 3150 0    50   ~ 0
@@ -1049,34 +962,6 @@ Text Label 3850 3450 0    50   ~ 0
 SSR_SRCLK
 Text Label 3850 3350 0    50   ~ 0
 SSR_RCLK
-Wire Wire Line
-	4350 1050 5150 1050
-Wire Wire Line
-	4350 1150 5150 1150
-Wire Wire Line
-	4350 1250 5150 1250
-Wire Wire Line
-	4350 1750 5150 1750
-Wire Wire Line
-	4350 1850 5150 1850
-Wire Wire Line
-	4350 1950 5150 1950
-Wire Wire Line
-	4350 2050 5150 2050
-Text Label 4350 1050 0    50   ~ 0
-LCD_RS
-Text Label 4350 1150 0    50   ~ 0
-LCD_RW
-Text Label 4350 1250 0    50   ~ 0
-LCD_E
-Text Label 4350 1750 0    50   ~ 0
-LCD_DB4
-Text Label 4350 1850 0    50   ~ 0
-LCD_DB5
-Text Label 4350 1950 0    50   ~ 0
-LCD_DB6
-Text Label 4350 2050 0    50   ~ 0
-LCD_DB7
 Wire Wire Line
 	6900 4350 6450 4350
 Wire Wire Line
@@ -1108,17 +993,15 @@ LCD_DB5
 Text Notes 7450 7500 0    50   ~ 0
 OKI AC125A DTMF Converter - Microcontroller and Peripherals
 Text Notes 8150 7650 0    50   ~ 0
-2020-05-24
+2020-06-27
 Text Notes 10550 7650 0    50   ~ 0
 2
 Text Notes 8300 1300 0    50   ~ 0
 OR0 Active
 Text Notes 8350 3050 0    50   ~ 0
 OR1 Active
-Text Notes 7100 6750 0    100  Italic 20
+Text Notes 7050 6800 0    100  Italic 20
 OKI AC125A Crossbar PBX DTMF Converter
-Text Notes 7150 6900 0    50   ~ 0
-(c) 2020, Howard M. Harte - WZ2Q
 Wire Wire Line
 	9250 1750 9250 1650
 Wire Wire Line
@@ -1145,4 +1028,121 @@ Text Notes 7000 6150 0    50   Italic 0
 Layout note:\nReset circuit should be close to the pin on the MCU.
 NoConn ~ 4250 4550
 NoConn ~ 4250 4450
+Wire Wire Line
+	5550 2300 5550 2250
+$Comp
+L power:GND #PWR0118
+U 1 1 5EE824BE
+P 5550 2300
+F 0 "#PWR0118" H 5550 2050 50  0001 C CNN
+F 1 "GND" H 5555 2127 50  0000 C CNN
+F 2 "" H 5550 2300 50  0001 C CNN
+F 3 "" H 5550 2300 50  0001 C CNN
+	1    5550 2300
+	1    0    0    -1  
+$EndComp
+Text Label 4350 2050 0    50   ~ 0
+LCD_DB7
+Text Label 4350 1950 0    50   ~ 0
+LCD_DB6
+Text Label 4350 1850 0    50   ~ 0
+LCD_DB5
+Text Label 4350 1750 0    50   ~ 0
+LCD_DB4
+Text Label 4350 1250 0    50   ~ 0
+LCD_E
+Text Label 4350 1150 0    50   ~ 0
+LCD_RW
+Text Label 4350 1050 0    50   ~ 0
+LCD_RS
+Wire Wire Line
+	4350 2050 5150 2050
+Wire Wire Line
+	4350 1950 5150 1950
+Wire Wire Line
+	4350 1850 5150 1850
+Wire Wire Line
+	4350 1750 5150 1750
+Wire Wire Line
+	4350 1250 5150 1250
+Wire Wire Line
+	4350 1150 5150 1150
+Wire Wire Line
+	4350 1050 5150 1050
+NoConn ~ 5150 1650
+NoConn ~ 5150 1550
+NoConn ~ 5150 1450
+NoConn ~ 5150 1350
+Wire Wire Line
+	5550 850  5550 800 
+$Comp
+L power:+5V #PWR?
+U 1 1 5EE91B91
+P 5550 800
+AR Path="/5EE91B91" Ref="#PWR?"  Part="1" 
+AR Path="/5EBEBADD/5EE91B91" Ref="#PWR0119"  Part="1" 
+F 0 "#PWR0119" H 5550 650 50  0001 C CNN
+F 1 "+5V" H 5565 973 50  0000 C CNN
+F 2 "" H 5550 800 50  0001 C CNN
+F 3 "" H 5550 800 50  0001 C CNN
+	1    5550 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L ac125a_dtmf:DMC-16105-LY LCD1
+U 1 1 5EE28C31
+P 5550 1550
+F 0 "LCD1" H 5994 1596 50  0000 L CNN
+F 1 "DMC-16105-LY" H 5994 1505 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical" H 5550 750 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/data%20sheets/optrex%20pdfs/dmc-16105ny-ly-ann.pdf" H 5650 1450 50  0001 C CNN
+	1    5550 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 1150 3950 1200
+Wire Wire Line
+	3950 850  3950 800 
+$Comp
+L power:GND #PWR?
+U 1 1 5EC2B57D
+P 3950 1200
+AR Path="/5EC2B57D" Ref="#PWR?"  Part="1" 
+AR Path="/5BA49F1B/5EC2B57D" Ref="#PWR?"  Part="1" 
+AR Path="/5EBEBADD/5EC2B57D" Ref="#PWR02"  Part="1" 
+F 0 "#PWR02" H 3950 950 50  0001 C CNN
+F 1 "GND" H 3955 1027 50  0000 C CNN
+F 2 "" H 3950 1200 50  0001 C CNN
+F 3 "" H 3950 1200 50  0001 C CNN
+	1    3950 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5EC2B577
+P 3950 1000
+AR Path="/5EC2B577" Ref="C?"  Part="1" 
+AR Path="/5EBEBADD/5EC2B577" Ref="C1"  Part="1" 
+F 0 "C1" H 4065 1046 50  0000 L CNN
+F 1 "0.1uF" H 4065 955 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 3988 850 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/vishay-bc-components/K104Z15Y5VE5TL2/BC1148CT-ND/286770" H 3950 1000 50  0001 C CNN
+	1    3950 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5EC2B51D
+P 3950 800
+AR Path="/5EC2B51D" Ref="#PWR?"  Part="1" 
+AR Path="/5EBEBADD/5EC2B51D" Ref="#PWR01"  Part="1" 
+F 0 "#PWR01" H 3950 650 50  0001 C CNN
+F 1 "+5V" H 3965 973 50  0000 C CNN
+F 2 "" H 3950 800 50  0001 C CNN
+F 3 "" H 3950 800 50  0001 C CNN
+	1    3950 800 
+	1    0    0    -1  
+$EndComp
+Text Notes 7050 7050 0    50   ~ 10
+(c) 2020, Howard M. Harte - WZ2Q\nhttps://github.com/hharte/ac125a_dtmf
 $EndSCHEMATC

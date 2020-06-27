@@ -375,15 +375,15 @@ Wire Wire Line
 Text Notes 7500 7500 0    50   ~ 0
 OKI AC125A DTMF Converter - PBX Interface and Power Supply
 Text Notes 8200 7650 0    50   ~ 0
-2020-05-24
+2020-05-27
 Text Notes 10600 7650 0    50   ~ 0
 2
 Text Notes 6250 1700 0    50   ~ 0
 Power LED
 Text Notes 7100 6850 0    100  Italic 20
 OKI AC125A Crossbar PBX DTMF Converter
-Text Notes 7150 7000 0    50   ~ 0
-(c) 2020, Howard M. Harte - WZ2Q
+Text Notes 7100 7100 0    50   ~ 10
+(c) 2020, Howard M. Harte - WZ2Q\nhttps://github.com/hharte/ac125a_dtmf
 NoConn ~ 3900 3650
 NoConn ~ 3900 4050
 NoConn ~ 3900 4250
@@ -474,4 +474,48 @@ Text Label 8900 4550 2    50   ~ 0
 AC125A_PC1
 Text Label 8900 4750 2    50   ~ 0
 AC125A_PE1
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5F4E24D8
+P 1600 6550
+F 0 "H1" H 1700 6596 50  0000 L CNN
+F 1 "MountingHole" H 1700 6505 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.7mm_Pad" H 1600 6550 50  0001 C CNN
+F 3 "~" H 1600 6550 50  0001 C CNN
+	1    1600 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5F4E2831
+P 1600 6800
+F 0 "H2" H 1700 6846 50  0000 L CNN
+F 1 "MountingHole" H 1700 6755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.7mm_Pad" H 1600 6800 50  0001 C CNN
+F 3 "~" H 1600 6800 50  0001 C CNN
+	1    1600 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5F4E613B
+P 1600 7050
+F 0 "H3" H 1700 7096 50  0000 L CNN
+F 1 "MountingHole" H 1700 7005 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.7mm_Pad" H 1600 7050 50  0001 C CNN
+F 3 "~" H 1600 7050 50  0001 C CNN
+	1    1600 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5F4E6141
+P 1600 7300
+F 0 "H4" H 1700 7346 50  0000 L CNN
+F 1 "MountingHole" H 1700 7255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.7mm_Pad" H 1600 7300 50  0001 C CNN
+F 3 "~" H 1600 7300 50  0001 C CNN
+	1    1600 7300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
