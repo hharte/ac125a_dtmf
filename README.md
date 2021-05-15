@@ -1,5 +1,5 @@
 # OKI AC125A Crossbar PBX DTMF Converter
-
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5064a76a36684318a98828b59477591f)](https://www.codacy.com/gh/hharte/ac125a_dtmf/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hharte/ac125a_dtmf&amp;utm_campaign=Badge_Grade)
 
 ## Howard M. Harte - WZ2Q - June, 2020
 
